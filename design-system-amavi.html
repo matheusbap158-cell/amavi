@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design system | Amavi</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FFF7EE;--cream2:#FFE6EB;--blush:#FFC2D1;--pink:#FF7A9C;--rose:#B3123F;--rust:#C4163F;--cocoa:#2A0E1C;--cocoa2:#44162B;--ink:#3A1220;--muted:#7A4A5A;--line:#F3CFD8;--mint:#CBEBD6;--lilac:#E6D9F7;--butter:#FFEDB0;--peach:#FFDCC8;--wa:#25D366;--alert:#B3261E;--font-display:'Fraunces',Georgia,serif;--font-body:'Outfit',sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-body);font-weight:300;font-size:17px;line-height:1.7}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;margin:0}
+h1{font-size:clamp(46px,8vw,92px);line-height:.96;color:var(--rust)}
+h1 em,h2 em{font-style:italic;color:var(--pink)}
+h2{font-size:clamp(34px,5vw,50px);line-height:1.05;margin-bottom:8px;color:var(--rust)}
+.lab{font-weight:500;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose)}
+header{padding:70px 0 50px;background:var(--cream2)}
+header p{max-width:40rem;color:var(--muted)}
+section{padding:60px 0;border-bottom:1px solid var(--line)}
+.sub{color:var(--muted);max-width:44rem;margin:0 0 28px}
+.sw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+.sw{background:#fff;border:1px solid var(--line);border-radius:20px;padding:0;text-align:left;cursor:pointer;color:inherit;font:inherit;overflow:hidden}
+.sw:focus-visible,.btn:focus-visible,.chip:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+.sw i{display:block;height:78px;border-bottom:1px solid var(--line)}
+.sw span{display:block;padding:12px 14px}
+.sw b{display:block;font-weight:500;font-size:15px}
+.sw code{font-size:13px;color:var(--rose);font-weight:500}
+.sw small{display:block;color:var(--muted);font-size:12.5px;line-height:1.4;margin-top:4px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--cocoa);color:var(--cream);padding:10px 20px;border-radius:999px;font-weight:500;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.on{opacity:1}
+.mac-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:16px}
+.mc{background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px 10px;text-align:center}
+.mc svg{width:84%;height:auto}.mc b{display:block;font-family:var(--font-display);font-weight:400;font-size:20px;color:var(--rust)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:999px;font:500 16px var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn-primary{background:var(--rust);color:var(--cream)}.btn-ghost{background:transparent;color:var(--rust);border-color:var(--rust)}.btn-wa{background:var(--wa);color:#10230f}
+.row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.chip{border:1.5px solid var(--rust);background:transparent;color:var(--rust);padding:10px 22px;min-height:46px;font:500 15px var(--font-body);cursor:pointer;border-radius:999px}
+.chip[aria-pressed="true"]{background:var(--rust);color:var(--cream)}
+.scal{height:13px;background:radial-gradient(circle at 13px 0,var(--cream2) 12.5px,transparent 13.5px) 0 0/26px 13px repeat-x,var(--cocoa);border-radius:8px 8px 0 0}
+.box{background:var(--rust);color:var(--cream);border-radius:30px;padding:24px;max-width:340px}
+.pend{display:inline-block;border:1px dashed currentColor;border-radius:6px;padding:0 8px;font-size:.8em}
+pre{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;overflow:auto;font:13px/1.6 ui-monospace,Consolas,monospace}
+ul.rules{padding-left:20px;color:var(--muted)}ul.rules li{margin-bottom:6px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="lab">Connect Alpha · Design system</div><h1 style="margin:16px 0">Amavi <em>macarons</em></h1><p>Creme, rosé e ferrugem, tirados da logo. O macaron é desenhado em SVG próprio e a borda de "pezinho" separa as seções. Clique numa amostra para copiar o código.</p></div></header>
+<main>
+<section><div class="wrap"><h2>1. Cores</h2><p class="sub">O rosé #FF7A9C não é cor de texto pequeno (use #B3123F). O verde do WhatsApp é exclusivo do botão e leva texto escuro.</p><div class="sw-grid" id="sw"></div></div></section>
+<section><div class="wrap"><h2>2. Macarons por sabor</h2><p class="sub">Ilustração própria: casca, "pezinho", recheio e brilho. Os sabores são sugestão <span class="pend">[A CONFIRMAR]</span>.</p><div class="mac-row" id="macs"></div></div></section>
+<section><div class="wrap"><h2>3. Tipografia</h2><h1 style="font-size:clamp(40px,7vw,80px)">Pequenos de tamanho, <em>grandes de sabor.</em></h1><p style="margin-top:16px;max-width:36rem">Fraunces nos títulos, com itálico rosé nas palavras de carinho. Outfit leve no corpo.</p></div></section>
+<section><div class="wrap"><h2>4. Componentes</h2>
+<div class="row" style="margin-bottom:26px"><a class="btn btn-primary" href="#">Montar minha caixa</a><a class="btn btn-ghost" href="#">Ver os sabores</a><a class="btn btn-wa" href="#">Chamar no WhatsApp</a></div>
+<div class="row" id="chips" style="margin-bottom:26px"><button class="chip" aria-pressed="true">6 macarons</button><button class="chip" aria-pressed="false">12 macarons</button><button class="chip" aria-pressed="false">Presente</button></div>
+<div class="box"><b style="font-family:var(--font-display);font-style:italic;font-weight:400;font-size:26px">Sua caixa</b><p style="margin:8px 0 0;font-size:14px;color:var(--blush)">3 de 6</p></div>
+<h3 style="font-size:24px;margin:30px 0 12px;color:var(--rust)">Borda de "pezinho"</h3><div class="scal"></div>
+</div></section>
+<section><div class="wrap"><h2>5. Movimento</h2><ul class="rules"><li>Macarons que flutuam e reagem ao mouse; mordida com farelinhos e coração.</li><li>O macaron se abre na rolagem (casca de cima, recheio, casca de baixo) e o sabor pode ser trocado.</li><li>Confete de corações quando a caixa fica completa.</li><li>Tudo desligado em <code>prefers-reduced-motion</code>.</li></ul></div></section>
+<section><div class="wrap"><h2>6. Conversão para WhatsApp</h2><ul class="rules"><li>A caixa monta o pedido e abre o WhatsApp com tudo escrito.</li><li>Quiz e cartões de sabor levam direto para a caixa; a bandeja flutuante lembra de concluir.</li><li>Sem preço, prazo ou promessa; o que a Amavi não informou fica como pendência visível.</li></ul></div></section>
+<section><div class="wrap"><h2>Tokens prontos (CSS)</h2><pre id="css"></pre></div></section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite">Copiado</div>
+<script>
+(function(){
+  var cores=[['Creme','--cream','#FFF7EE','Fundo padrão'],['Rosa-bebê','--cream2','#FFE6EB','Seções alternadas'],['Blush','--blush','#FFC2D1','Halos e texto claro'],['Rosé','--pink','#FF7A9C','Corações, decorativo'],['Rosé texto','--rose','#B3123F','Rótulos (6:1)'],['Cereja','--rust','#C4163F','Cor de ação e destaque (5,6:1)'],['Vinho','--cocoa','#2A0E1C','Seção escura e rodapé'],['Vinho 2','--cocoa2','#44162B','Cartões sobre vinho'],['Tinta','--ink','#3A1220','Texto de corpo'],['Texto secundário','--muted','#7A4A5A','Apoio (5,6:1)'],['Linha','--line','#F3CFD8','Bordas'],['Pistache (fundo)','--mint','#CBEBD6','Seção da caixa'],['Lilás (fundo)','--lilac','#E6D9F7','Seção do quiz'],['Manteiga (fundo)','--butter','#FFEDB0','Seção como pedir'],['Pêssego (fundo)','--peach','#FFDCC8','Seção de contato'],['WhatsApp','--wa','#25D366','Exclusivo do botão'],['Alerta','--alert','#B3261E','Erro']];
+  var host=document.getElementById('sw');
+  cores.forEach(function(c){var b=document.createElement('button');b.className='sw';b.type='button';b.setAttribute('aria-label','Copiar '+c[0]+' '+c[2]);b.innerHTML='<i style="background:'+c[2]+'"></i><span><b>'+c[0]+'</b><code>'+c[2]+'</code><small>'+c[1]+' · '+c[3]+'</small></span>';
+    b.addEventListener('click',function(){var t=document.getElementById('toast');function ok(){t.textContent='Copiado: '+c[2];t.classList.add('on');setTimeout(function(){t.classList.remove('on')},1400)}if(navigator.clipboard){navigator.clipboard.writeText(c[2]).then(ok,ok)}else{ok()}});host.appendChild(b);});
+  var F=[['Chocolate','#8A5238','#6E3F2A','#3B1F16'],['Framboesa','#E2788C','#C95C72','#A82B4A'],['Cereja','#B5253A','#961B2E','#5A0F1D'],['Café','#C9A07A','#AA7F58','#5B3A27'],['Coco','#F6EBD6','#E6D4B4','#FFF7E6'],['Pistache','#A9C58B','#8BAA6E','#D8E6B8'],['Baunilha','#F2C4C0','#E5A5A2','#FFF1E0'],['Maracujá','#F2C14E','#D9A52E','#F8E08A']];
+  function feet(y,s,n){var o='';for(var i=0;i<n;i++)o+='<circle cx="'+(15+i*(90/(n-1)))+'" cy="'+y+'" r="5.2" fill="'+s+'"/>';return o}
+  document.getElementById('macs').innerHTML=F.map(function(f){return '<div class="mc"><svg viewBox="0 0 120 96" aria-hidden="true">'+feet(58,f[2],13)+'<path d="M12 59C12 92 108 92 108 59Z" fill="'+f[1]+'"/><rect x="17" y="45" width="86" height="15" rx="7.500" fill="'+f[3]+'"/>'+'<path d="M12 47C12 6 108 6 108 47Z" fill="'+f[1]+'"/><ellipse cx="42" cy="22" rx="20" ry="6.500" fill="#fff" opacity=".32" transform="rotate(-16 42 22)"/>'+feet(48,f[2],13)+'</svg><b>'+f[0]+'</b></div>';}).join('');
+  document.querySelectorAll('#chips .chip').forEach(function(c){c.addEventListener('click',function(){c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')==='true'?'false':'true')})});
+  document.getElementById('css').textContent=':root{\n'+cores.map(function(c){return '  '+c[1]+':'+c[2]+';'}).join('\n')+'\n  --font-display:\'Fraunces\',Georgia,serif; --font-body:\'Outfit\',sans-serif;\n}';
+})();
+</script>
+</body>
+</html>
